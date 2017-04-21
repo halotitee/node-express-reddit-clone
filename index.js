@@ -118,6 +118,21 @@ app.get('/subreddits', function(request, response) {
     response.send("TO BE IMPLEMENTED");
 });
 
+//User posts page
+// app.get('/u/:name', function(request, response) {
+//     console.log(request.params.user_username)
+//     myReddit.getAllPostsForUsername(request.params.user_username)
+//     .then(result => myReddit.getAllPosts(result.username))
+//     .then(userPosts =>{
+//         response.render('homepage', {posts: userPosts})
+//     })
+//     .catch(error =>{
+//         console.log(error);
+//         response.status(404).send('404 error!');
+//     })
+    
+
+// });
 
 
 // Subreddit homepage, similar to the regular home page but filtered by sub.
@@ -195,9 +210,6 @@ middleware calls next(), then also pass it to the final request handler specifie
 // });
  
 
-
-<<<<<<< HEAD
-=======
  
  /* Vote handler explained
  When a vote request is sent, we need to verify that the user is signed up and logged in.
@@ -206,7 +218,7 @@ middleware calls next(), then also pass it to the final request handler specifie
  
  */
 
->>>>>>> eddy/master
+
 app.post('/vote', onlyLoggedIn, function(request, response) {
     console.log(request.body);
    
