@@ -11,7 +11,8 @@ mixin postList(posts)
                     p 
                         a(href="/post/"+ post.posts_id) View Comments
                     p Score: #{post.voteScore} Upvotes: #{post.numUpvotes} Downvotes: #{post.numDownvotes}
-                            form(action="/vote" method="post")
-                                input(type="hidden" name="postId" value=post.posts_id)
-                                button(type="submit" name="voteDirection" value=1) upvote this  
-                                button(type="submit" name="voteDirection" value=-1) downvote this
+                        form(action="/vote" method="post")
+                            input(type="hidden" name="postId" value=post.posts_id)
+                            button(type="submit" name="voteDirection" value='1') upvote this  
+                            button(type="submit" name="voteDirection" value='-1') downvote this
+

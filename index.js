@@ -196,6 +196,17 @@ middleware calls next(), then also pass it to the final request handler specifie
  
 
 
+<<<<<<< HEAD
+=======
+ 
+ /* Vote handler explained
+ When a vote request is sent, we need to verify that the user is signed up and logged in.
+ 1.Use Promise.all to get the future value of the object [session cookies, request.body] to verify that the user is logged in
+ 2.Once those promises are resolved, return the object's postId, userId, and voteDirection- but get their numerical value
+ 
+ */
+
+>>>>>>> eddy/master
 app.post('/vote', onlyLoggedIn, function(request, response) {
     console.log(request.body);
    
@@ -211,6 +222,7 @@ app.post('/vote', onlyLoggedIn, function(request, response) {
     .catch(e => console.log(e));
 
 });
+
 
 
 // This handler will send out an HTML form for creating a new post
